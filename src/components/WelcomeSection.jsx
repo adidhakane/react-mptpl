@@ -33,7 +33,7 @@ const WelcomeSection = () => {
           </div>
         </div>
         <button className={styles.ctaButton}>
-          Explore Our Legacy →
+          Explore Our Legacy
         </button>
       </div>
     </section>
