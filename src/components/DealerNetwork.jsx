@@ -5,6 +5,16 @@ const DealerNetwork = () => {
   const dealers = [
     "Quantum Technology & Services, Kanpur",
     "Siemo Service, Chennai",
+    "RSP Enterprises, Sri Lanka",
+    "Innovative Solutions, Karnataka",
+    "Smatic Engineers, Secunderabad",
+    "Rising Sun Auto Tech, Kolkata",
+    "Volta Engineering Solutions, Assam",
+    "Sun Shine Automation India Limited, Jaipur",
+    "Artech Solutions, Chattisgarh",
+    "Leelavati Automation Pvt Ltd, Mumbai",
+    "Unicon Automation and Control, Ahmedabad",
+    "Arist Automation, Indore"
     // ... other dealers
   ];
 

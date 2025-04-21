@@ -41,6 +41,10 @@ const HeroBanner = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000 }}
         loop
+        style={{
+          // height: '100vh',
+          position: 'relative'
+        }}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
