@@ -9,7 +9,7 @@ import '../styles/style.css';
 const slides = [
   {
     // img: '/Images/magarpatta.jpg',
-    img:"Images/Swiper-Engine.jpg",//engine
+    img:"/Images/Swiper-Engine.jpg",//engine
     alt: 'Magarpatta city view',
     text: 'Experience the perfect blend of innovation and excellence.'
   },
