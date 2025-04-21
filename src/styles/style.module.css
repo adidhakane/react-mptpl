@@ -1,28 +1,109 @@
-/* Welcome Section */
+/* Welcome Section - Enhanced */
 .welcome {
-    background: linear-gradient(to right, #f8f9fa, #ffffff);
-    padding: 4rem 2rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-  }
-  
-  .ctaButton {
-    background: #266c33;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: block;
-    margin: 2rem auto 0;
-  }
-  
-  .ctaButton:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(38,108,51,0.3);
-  }
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 8rem 0;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.welcomeContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.welcomeColumns {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.welcomeText {
+  padding-right: 3rem;
+}
+
+.leadText {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.subText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.welcomeStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  background: #266c33;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(38,108,51,0.2);
+}
+
+.statItem {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+.statItem h3 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.statItem p {
+  color: #cbd5e0;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.ctaButton {
+  background: #266c33;
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2rem auto 0;
+  box-shadow: 0 5px 15px rgba(38,108,51,0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  background: #1e5934;
+  box-shadow: 0 8px 25px rgba(38,108,51,0.4);
+}
+
+.ctaButton::after {
+  content: '→';
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover::after {
+  transform: translateX(5px);
+}
   
 /* Banner Section */
 .banner {
