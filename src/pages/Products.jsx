@@ -182,6 +182,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProductPageHeader from '../components/products/ProductPageHeader';
 import ProductOverview from '../components/products/ProductOverview';
+import ProductCategoryNav from '../components/products/ProductCategoryNav';
 import styles from '../styles/Products.module.css';
 
 const Products = () => {
@@ -342,7 +343,7 @@ return (
     <Header />
     
     <ProductPageHeader />
-    
+    <ProductCategoryNav categories={categories} />
     <div className={styles.fullWidthContainer}>
       <ProductOverview />
       

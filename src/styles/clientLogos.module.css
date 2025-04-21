@@ -1,4 +1,4 @@
-.logoContainer {
+/* .logoContainer {
     padding: 4rem 2rem;
     background: #f9f9f9;
   }
@@ -45,4 +45,542 @@
   @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  } */
+
+
+
+/* Option 1 - Tabbed Interface -- 8/10 */
+/* clientLogos.module.css */
+.logoContainerCompact {
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #266c33;
+}
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tabButton {
+  padding: 0.75rem 1.5rem;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tabButton:hover {
+  background: #e0e0e0;
+}
+
+.activeTab {
+  background: #266c33;
+  color: white;
+}
+
+.categoryTitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.logoImage {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.logoImage:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .tabButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
+  
+  .logoGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+
+
+
+/* Option 2 - Compact All-in-One View -- 6/10 */
+/* clientLogos.module.css */
+/* .logoContainerCompact {
+  padding: 3rem 1rem;
+  background: #f9f9f9;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #266c33;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.categoryCard {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.categoryTitle {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #266c33;
+}
+
+.logoSlider {
+  overflow: hidden;
+  position: relative;
+  height: 80px;
+}
+
+.logoTrack {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+  height: 100%;
+}
+
+.logoItem {
+  padding: 0 1rem;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 60px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.logoImage:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.categoryCard:nth-child(even) .logoTrack {
+  animation-direction: reverse;
+}
+.categoryCard:nth-child(2) .logoTrack {
+  animation-duration: 35s;
+}
+
+.categoryCard:nth-child(3) .logoTrack {
+  animation-duration: 40s;
+}
+
+.categoryCard:nth-child(4) .logoTrack {
+  animation-duration: 32s;
+}
+
+.categoryCard:nth-child(5) .logoTrack {
+  animation-duration: 38s;
+} */
+
+
+
+/* Option 3: Accordion Style (Best for Mobile) -- 7/10 */
+/* clientLogos.module.css */
+/* .logoContainerCompact {
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #266c33;
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordionItem {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  background: #266c33;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background: #1e5728;
+}
+
+.accordionIcon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.expanded .accordionContent {
+  max-height: 500px;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.logoImage {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.logoImage:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+} */
+
+
+
+/* Option 4: Compact Single-Row Sliders (Recommended) -- 7.5/10 */
+/* clientLogos.module.css */
+/* .logoContainerCompact {
+  padding: 2rem 0;
+  background: #f9f9f9;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #266c33;
+}
+
+.allCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.categoryRow {
+  padding: 0.5rem 0;
+}
+
+.categoryTitle {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #266c33;
+  padding: 0 1rem;
+}
+
+.logoScroller {
+  overflow: hidden;
+  position: relative;
+  height: 70px;
+}
+
+.logoTrack {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+}
+
+.logoItem {
+  padding: 0 1.5rem;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 50px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.logoImage:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.categoryRow:nth-child(even) .logoTrack {
+  animation-direction: reverse;
+} */
+
+
+/* Option 5 - As per nikhil sir's suggestion -- big clients static remaining clients scrolling */
+/* clientLogos.module.css */
+.clientShowcase {
+  padding: 3rem 1rem 2rem;
+  background: #f9f9f9;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100vh;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #266c33;
+  flex-shrink: 0;
+}
+
+/* Premium clients grid */
+.premiumGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.premiumLogoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+  padding: 0rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premiumLogoItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.premiumLogoImage {
+  max-width: 45%;
+  max-height: 80%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.premiumLogoImage:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Divider */
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 1rem 0;
+  flex-shrink: 0;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ddd;
+  z-index: 1;
+}
+
+.divider span {
+  position: relative;
+  background: #f9f9f9;
+  padding: 0 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+/* Scrolling clients */
+.scrollingContainer {
+  overflow: hidden;
+  position: relative;
+  height: 80px;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.scrollingTrack {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+}
+
+.scrollingLogoItem {
+  padding: 0 1.5rem;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.scrollingLogoImage {
+  height: 50px;
+  max-width: 100px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.scrollingLogoImage:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .premiumGrid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .clientShowcase {
+    height: auto;
+    max-height: none;
+    padding: 2rem 1rem;
+  }
+  
+  .premiumGrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .premiumGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+  }
+  
+  .scrollingLogoImage {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .premiumGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+  }
+}
