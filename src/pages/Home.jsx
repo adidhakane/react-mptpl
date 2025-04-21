@@ -39,8 +39,6 @@ const Home = () => {
         <ProductCategories />
         <ClientLogos />
         <DealerNetwork />
-        {/* <div style={{ margin: '4rem 0' }}></div>  */}
-        {/* Spacer */}
         <TestimonialsAndNews />
         {/* <NewsSection /> */}
       </main>

@@ -1,0 +1,233 @@
+/* src/styles/groupProfile.module.css */
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profileHeader {
+    background-color: #f5f5f5;
+    padding: 60px 0 30px;
+    text-align: center;
+}
+
+.profileHeader h1 {
+    color: #1a5d1a;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.profileContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.profileImage {
+    width: 45%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profileImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.profileText {
+    width: 50%;
+}
+
+.profileText h2 {
+    color: #1a5d1a;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.profileText h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #1a5d1a;
+}
+
+.profileText p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.profileSection {
+    margin-bottom: 50px;
+}
+
+.profileSection h2 {
+    color: #1a5d1a;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.profileSection h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #1a5d1a;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1a5d1a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0d4b0d;
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #1a5d1a;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timelineContainer {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timelineContainer::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #1a5d1a;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #f5f5f5;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #f5f5f5;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #f5f5f5;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f5f5f5 transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.timelineContent {
+    padding: 20px 30px;
+    background-color: #f5f5f5;
+    position: relative;
+    border-radius: 6px;
+}
+
+.timelineContent h3 {
+    color: #1a5d1a;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .profileImage, .profileText {
+        width: 100%;
+    }
+    
+    .profileImage {
+        margin-bottom: 30px;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timelineContainer {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timelineContainer::before {
+        left: 60px;
+        border: medium solid #f5f5f5;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #f5f5f5 transparent transparent;
+    }
+    
+    .left::after, .right::after {
+        left: 15px;
+    }
+    
+    .right {
+        left: 0%;
+    }
+}

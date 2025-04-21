@@ -76,7 +76,7 @@ const Header = () => {
             <li><Link to="/products">Products</Link></li>
             <li><Link to="/group-profile">Group Profile</Link></li>
             <li><Link to="/careers">Careers</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+            <li><a href="#footer">Contact Us</a></li>
           </ul>
         </nav>
       </div>

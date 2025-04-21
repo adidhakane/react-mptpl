@@ -1,0 +1,716 @@
+/* src/styles/careers.module.css */
+.wrapper {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    color: #333333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Hero Section */
+  .heroSection {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .heroContent {
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .heroContent h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .heroContent p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .heroCta {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .heroCta:hover {
+    background-color: #00796b;
+  }
+  
+  /* Values Section */
+  .valuesSection {
+    padding: 60px 0;
+    background-color: white;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: #009688;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #009688;
+  }
+  
+  .valueCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .valueCard {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .valueIcon {
+    width: 70px;
+    height: 70px;
+    background-color: #e0f2f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+  
+  .valueIcon i {
+    font-size: 30px;
+    color: #009688;
+  }
+  
+  .valueCard h3 {
+    font-size: 1.3rem;
+    color: #009688;
+    margin-bottom: 15px;
+  }
+  
+  .valueCard p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Careers Section */
+  .careersSection {
+    padding: 60px 0;
+  }
+  
+  .tabsContainer {
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .tabs {
+    display: flex;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tabButton {
+    flex: 1;
+    padding: 15px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .tabButton:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .activeTab {
+    background-color: white;
+    color: #009688;
+    border-bottom: 3px solid #009688;
+  }
+  
+  .tabContent {
+    padding: 30px;
+  }
+  
+  /* Openings Tab */
+  .searchContainer {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    border-color: #009688;
+    box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.2);
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+  
+  .noJobsFound {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .noJobsFound i {
+    font-size: 48px;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  
+  .noJobsFound p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .resetButton {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .jobCards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Apply Tab */
+  .applicationForm {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .applicationForm h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #009688;
+    text-align: center;
+  }
+  
+  .formRow {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .formGroup {
+    flex: 1;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .required {
+    color: #f44336;
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .formGroup input:focus,
+  .formGroup select:focus,
+  .formGroup textarea:focus {
+    outline: none;
+    border-color: #009688;
+    box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.1);
+  }
+  
+  .formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .errorInput {
+    border-color: #f44336 !important;
+  }
+  
+  .errorMessage {
+    color: #f44336;
+    font-size: 12px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+  }
+  
+  .fileUploadWrapper {
+    position: relative;
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    transition: border-color 0.3s;
+  }
+  
+  .fileUploadWrapper:hover {
+    border-color: #009688;
+  }
+  
+  .fileUploadWrapper input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .fileUploadInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .fileUploadInfo i {
+    font-size: 24px;
+    color: #009688;
+  }
+  
+  .fileUploadInfo span {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .primaryBtn, .secondaryBtn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .primaryBtn {
+    background-color: #009688;
+    color: white;
+    border: none;
+  }
+  
+  .primaryBtn:hover {
+    background-color: #00796b;
+  }
+  
+  .primaryBtn:disabled {
+    background-color: #b2dfdb;
+    cursor: not-allowed;
+  }
+  
+  .secondaryBtn {
+    background-color: transparent;
+    color: #666;
+    border: 1px solid #ddd;
+  }
+  
+  .secondaryBtn:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .successMessage {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .successMessage i {
+    font-size: 60px;
+    color: #4caf50;
+    margin-bottom: 20px;
+  }
+  
+  .successMessage h4 {
+    font-size: 24px;
+    color: #009688;
+    margin-bottom: 15px;
+  }
+  
+  .successMessage p {
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .contactInfo {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contactInfo h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #009688;
+  }
+  
+  .address p {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .address a {
+    color: #009688;
+    text-decoration: none;
+  }
+  
+  .address a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Culture Tab */
+  .cultureContent {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .cultureImageWrapper {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cultureImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .cultureText {
+    flex: 1;
+  }
+  
+  .cultureText h3 {
+    font-size: 24px;
+    color: #009688;
+    margin-bottom: 15px;
+  }
+  
+  .cultureText p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .cultureText h4 {
+    font-size: 18px;
+    color: #009688;
+    margin-bottom: 15px;
+    margin-top: 25px;
+  }
+  
+  .cultureList {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  
+  .cultureList li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  
+  .cultureList li i {
+    color: #009688;
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+  
+  .testimonial {
+    background-color: #f5f5f5;
+    border-left: 4px solid #009688;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 30px;
+  }
+  
+  .testimonialContent {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .testimonialAuthor {
+    display: flex;
+    align-items: center;
+  }
+  
+  .testimonialAuthor img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .testimonialAuthor h5 {
+    font-size: 16px;
+    margin: 0 0 5px;
+    color: #333;
+  }
+  
+  .testimonialAuthor p {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+  }
+  
+  .benefitsSection {
+    margin-top: 40px;
+  }
+  
+  .benefitsSection h3 {
+    font-size: 24px;
+    color: #009688;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .benefitCard {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .benefitCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefitCard i {
+    font-size: 30px;
+    color: #009688;
+    margin-bottom: 15px;
+  }
+  
+  .benefitCard h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .benefitCard p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* FAQ Section */
+  .faqSection {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+  }
+  
+  .faqContainer {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faqItem {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .faqQuestion {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faqQuestion h4 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .faqQuestion i {
+    color: #009688;
+    transition: transform 0.3s;
+  }
+  
+  .faqItem.active .faqQuestion i {
+    transform: rotate(180deg);
+  }
+  
+  .faqAnswer {
+    padding: 0 20px 20px;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .cultureContent {
+      flex-direction: column;
+    }
+    
+    .cultureImageWrapper {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heroContent h1 {
+      font-size: 2.2rem;
+    }
+    
+    .heroContent p {
+      font-size: 1rem;
+    }
+    
+    .formRow {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .tabs {
+      flex-direction: column;
+    }
+    
+    .tabButton {
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .activeTab {
+      border-bottom: 1px solid #ddd;
+      border-left: 3px solid #009688;
+    }
+    
+    .tabContent {
+      padding: 20px 15px;
+    }
+    
+    .benefitsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .heroSection {
+      height: 300px;
+    }
+    
+    .sectionTitle {
+      font-size: 1.8rem;
+    }
+    
+    .valueCards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
