@@ -8,25 +8,28 @@ import '../styles/style.css';
 
 const slides = [
   {
-    img: '/Images/magarpatta.jpg',
+    // img: '/Images/magarpatta.jpg',
+    img:"Images/Swiper-Engine.jpg",//engine
     alt: 'Magarpatta city view',
     text: 'Experience the perfect blend of innovation and excellence.'
   },
   {
-    img: '/Images/Electronic drive-by.jpg',
+    // img: '/Images/Electronic drive-by.jpg',
+    img: '/Images/Swiper-ElectricVehicle.jpg',//electric vehicle
     alt: 'Magarpatta city view',
     text: 'Experience the perfect blend of innovation and excellence.'
   },
   {
-    img: '/Images/head-office.jpg',
+    // img: '/Images/head-office.jpg',
+    img: '/Images/Swiper-Generators.jpg',//generators
     alt: 'Magarpatta city view',
     text: 'Experience the perfect blend of innovation and excellence.'
   },
-  {
-    img: '/Images/speedboat.jpg',
-    alt: 'Magarpatta city view',
-    text: 'Experience the perfect blend of innovation and excellence.'
-  }
+  // {
+  //   img: '/Images/speedboat.jpg',
+  //   alt: 'Magarpatta city view',
+  //   text: 'Experience the perfect blend of innovation and excellence.'
+  // }
   // Add other slides similarly
 ];
 
@@ -41,10 +44,6 @@ const HeroBanner = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000 }}
         loop
-        style={{
-          // height: '100vh',
-          position: 'relative'
-        }}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
