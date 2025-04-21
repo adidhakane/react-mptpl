@@ -62,7 +62,7 @@ const Header = () => {
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link to="/">
-            <img src="/Images/logo.jpg" alt="Madhura International Logo" />
+            <img src="Images/logo.jpg" alt="Madhura International Logo" />
           </Link>
         </div>
         
