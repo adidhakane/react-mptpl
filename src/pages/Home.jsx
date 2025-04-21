@@ -26,6 +26,7 @@ import DealerNetwork from '../components/DealerNetwork';
 import NewsSection from '../components/NewsSection';
 import Footer from '../components/Footer';
 import styles from '../styles/home.module.css';
+import TestimonialsAndNews from '../components/TestimonialsAndNews';
 
 
 const Home = () => {
@@ -38,7 +39,10 @@ const Home = () => {
         <ProductCategories />
         <ClientLogos />
         <DealerNetwork />
-        <NewsSection />
+        {/* <div style={{ margin: '4rem 0' }}></div>  */}
+        {/* Spacer */}
+        <TestimonialsAndNews />
+        {/* <NewsSection /> */}
       </main>
       <Footer />
     </div>
