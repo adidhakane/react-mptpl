@@ -29,7 +29,6 @@ const Footer = () => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/products">Products</Link></li>
               <li><Link to="/group-profile">Group Profile</Link></li>
-              <li><Link to="/clients">Clients</Link></li>
               <li><Link to="/careers">Careers</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
             </ul>
@@ -39,7 +38,7 @@ const Footer = () => {
             <h3>Follow Us</h3>
             <div className={styles.socialIcons}>
               <a 
-                href="https://www.linkedin.com/company/madhura-power-technologies-private-limited" 
+                href="https://www.linkedin.com/company/madhura-power-technologies-pvt-ltd-global/" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
