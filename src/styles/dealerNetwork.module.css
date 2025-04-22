@@ -1,52 +1,6 @@
-/* .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    padding: 4rem;
-    background: white;
-    margin: 4rem 0;
-  }
-  
-  .mapImage {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  }
-  
-  .listContainer {
-    padding: 2rem;
-  }
-  
-  .dealerList {
-    display: grid;
-    gap: 1.5rem;
-    counter-reset: dealer-counter;
-  }
-  
-  .dealerItem {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-  }
-  
-  .number {
-    font-weight: 700;
-    color: #266c33;
-  }
-  
-  .location {
-    color: #666;
-    font-size: 0.9em;
-  } */
-
-
   /* dealerNetwork.module.css */
 .container {
-  padding: 2rem 4rem;
+  padding: 2rem 4rem; 
   background: white;
   max-height: 100vh;
   overflow: hidden;

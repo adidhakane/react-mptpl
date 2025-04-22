@@ -19,7 +19,7 @@
   
   .jobTitle {
     font-size: 18px;
-    color: #009688;
+    color: #266c33;
     margin: 0;
   }
   
@@ -48,7 +48,7 @@
   
   .metaItem i {
     margin-right: 5px;
-    color: #009688;
+    color: #266c33;
   }
   
   .jobDescription {
@@ -67,7 +67,7 @@
   .expandButton {
     background: none;
     border: none;
-    color: #009688;
+    color: #266c33;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -81,7 +81,7 @@
   }
   
   .applyButton {
-    background-color: #009688;
+    background-color: #266c33;
     color: white;
     border: none;
     border-radius: 4px;
@@ -107,7 +107,7 @@
   }
   
   .jobSection h4 {
-    color: #009688;
+    color: #266c33;
     font-size: 16px;
     margin-bottom: 10px;
   }
@@ -129,7 +129,7 @@
     content: "•";
     position: absolute;
     left: 0;
-    color: #009688;
+    color: #266c33;
     font-weight: bold;
   }
   

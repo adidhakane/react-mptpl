@@ -44,7 +44,7 @@
   }
   
   .heroCta {
-    background-color: #009688;
+    background-color: #266c33;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -70,7 +70,7 @@
   .sectionTitle {
     text-align: center;
     font-size: 2rem;
-    color: #009688;
+    color: #266c33;
     margin-bottom: 40px;
     position: relative;
   }
@@ -83,7 +83,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: #009688;
+    background-color: #266c33;
   }
   
   .valueCards {
@@ -115,12 +115,12 @@
   
   .valueIcon i {
     font-size: 30px;
-    color: #009688;
+    color: #266c33;
   }
   
   .valueCard h3 {
     font-size: 1.3rem;
-    color: #009688;
+    color: #266c33;
     margin-bottom: 15px;
   }
   
@@ -167,8 +167,8 @@
   
   .activeTab {
     background-color: white;
-    color: #009688;
-    border-bottom: 3px solid #009688;
+    color: #266c33;
+    border-bottom: 3px solid #266c33;
   }
   
   .tabContent {
@@ -192,7 +192,7 @@
   
   .searchInput:focus {
     outline: none;
-    border-color: #009688;
+    border-color: #266c33;
     box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.2);
   }
   
@@ -221,7 +221,7 @@
   }
   
   .resetButton {
-    background-color: #009688;
+    background-color: #266c33;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -246,7 +246,7 @@
   .applicationForm h3 {
     font-size: 1.5rem;
     margin-bottom: 25px;
-    color: #009688;
+    color: #266c33;
     text-align: center;
   }
   
@@ -288,7 +288,7 @@
   .formGroup select:focus,
   .formGroup textarea:focus {
     outline: none;
-    border-color: #009688;
+    border-color: #266c33;
     box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.1);
   }
   
@@ -319,7 +319,7 @@
   }
   
   .fileUploadWrapper:hover {
-    border-color: #009688;
+    border-color: #266c33;
   }
   
   .fileUploadWrapper input[type="file"] {
@@ -341,7 +341,7 @@
   
   .fileUploadInfo i {
     font-size: 24px;
-    color: #009688;
+    color: #266c33;
   }
   
   .fileUploadInfo span {
@@ -368,7 +368,7 @@
   }
   
   .primaryBtn {
-    background-color: #009688;
+    background-color: #266c33;
     color: white;
     border: none;
   }
@@ -420,7 +420,7 @@
   
   .successMessage h4 {
     font-size: 24px;
-    color: #009688;
+    color: #266c33;
     margin-bottom: 15px;
   }
   
@@ -439,7 +439,7 @@
   .contactInfo h3 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #009688;
+    color: #266c33;
   }
   
   .address p {
@@ -448,7 +448,7 @@
   }
   
   .address a {
-    color: #009688;
+    color: #266c33;
     text-decoration: none;
   }
   
@@ -483,7 +483,7 @@
   
   .cultureText h3 {
     font-size: 24px;
-    color: #009688;
+    color: #266c33;
     margin-bottom: 15px;
   }
   
@@ -496,7 +496,7 @@
   
   .cultureText h4 {
     font-size: 18px;
-    color: #009688;
+    color: #266c33;
     margin-bottom: 15px;
     margin-top: 25px;
   }
@@ -514,14 +514,14 @@
   }
   
   .cultureList li i {
-    color: #009688;
+    color: #266c33;
     margin-right: 10px;
     margin-top: 3px;
   }
   
   .testimonial {
     background-color: #f5f5f5;
-    border-left: 4px solid #009688;
+    border-left: 4px solid #266c33;
     padding: 20px;
     border-radius: 0 8px 8px 0;
     margin-top: 30px;
@@ -563,7 +563,7 @@
   
   .benefitsSection h3 {
     font-size: 24px;
-    color: #009688;
+    color: #266c33;
     margin-bottom: 25px;
     text-align: center;
   }
@@ -589,7 +589,7 @@
   
   .benefitCard i {
     font-size: 30px;
-    color: #009688;
+    color: #266c33;
     margin-bottom: 15px;
   }
   
@@ -638,7 +638,7 @@
   }
   
   .faqQuestion i {
-    color: #009688;
+    color: #266c33;
     transition: transform 0.3s;
   }
   
@@ -688,7 +688,7 @@
     
     .activeTab {
       border-bottom: 1px solid #ddd;
-      border-left: 3px solid #009688;
+      border-left: 3px solid #266c33;
     }
     
     .tabContent {

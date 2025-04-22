@@ -1,21 +1,3 @@
-// import HeroBanner from '../components/HeroBanner'; // Make sure this path is correct
-// import WelcomeSection from '../components/WelcomeSection';
-// import ProductCategories from '../components/ProductCategories';
-
-// const Home = () => {
-//   return (
-//     <main>
-//       <HeroBanner />
-//       <WelcomeSection />
-//       <ProductCategories />
-//       {/* Other home content */}
-//     </main>
-//   );
-// };
-
-// export default Home; // Must have default export
-
-
 import React from 'react';
 import Header from '../components/Header';
 import HeroBanner from '../components/HeroBanner';
