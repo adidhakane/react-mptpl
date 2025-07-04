@@ -24,13 +24,7 @@ const slides = [
     img: '/Images/Swiper-Generators.jpg',//generators
     alt: 'Magarpatta city view',
     text: 'Experience the perfect blend of innovation and excellence.'
-  },
-  // {
-  //   img: '/Images/speedboat.jpg',
-  //   alt: 'Magarpatta city view',
-  //   text: 'Experience the perfect blend of innovation and excellence.'
-  // }
-  // Add other slides similarly
+  }
 ];
 
 const HeroBanner = () => {

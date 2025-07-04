@@ -1,17 +1,24 @@
-import React from 'react';
+import React,{ useEffect }  from 'react';
 import Header from '../components/Header';
 import HeroBanner from '../components/HeroBanner';
 import WelcomeSection from '../components/WelcomeSection';
 import ProductCategories from '../components/ProductCategories';
 import ClientLogos from '../components/ClientLogos';
 import DealerNetwork from '../components/DealerNetwork';
-import NewsSection from '../components/NewsSection';
+// import NewsSection from '../components/NewsSection';
 import Footer from '../components/Footer';
 import styles from '../styles/home.module.css';
 import TestimonialsAndNews from '../components/TestimonialsAndNews';
+import LocomotiveScroll from "locomotive-scroll";
 
 
 const Home = () => {
+    useEffect(() => {
+    new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
+  }, []);
   return (
     <div className={styles.homeContainer}>
       <Header />
