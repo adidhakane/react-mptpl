@@ -1,11 +1,12 @@
 // src/components/Footer.jsx
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/Layout.module.css';
+import { Facebook, Linkedin,  } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id="contact" className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.footerContent}>
           <div className={`${styles.footerSection} ${styles.contactInfo}`}>
@@ -13,7 +14,7 @@ const Footer = () => {
             <p><strong>Corporate Office:</strong></p>
             <p>
               Madhura International Pvt Ltd.<br />
-              ICC Trade Tower, 5th Floor, 'B' Wing<br />
+              ICC Trade Tower, 2nd Floor, 'A' Wing<br />
               Senapati Bapat Road, Pune, Maharashtra 411016, India
             </p>
             <p>
@@ -42,14 +43,16 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-linkedin"></i>
+                {/* <i className="fab fa-linkedin"></i> */}
+                <Linkedin size={20} className="text-gray-400 group-hover:text-white" />
               </a>
               <a 
                 href="https://www.facebook.com/Madhura-Power-Technologies-Pvt-Ltd-102019338417296" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-facebook"></i>
+                {/* <i className="fab fa-facebook"></i> */}
+                <Facebook size={20} className="text-gray-400 group-hover:text-white" />
               </a>
             </div>
           </div>

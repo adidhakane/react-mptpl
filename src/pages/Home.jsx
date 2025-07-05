@@ -10,15 +10,27 @@ import Footer from '../components/Footer';
 import styles from '../styles/home.module.css';
 import TestimonialsAndNews from '../components/TestimonialsAndNews';
 import LocomotiveScroll from "locomotive-scroll";
+import { useLocation } from 'react-router-dom';
 
 
 const Home = () => {
+  const location = useLocation();
     useEffect(() => {
     new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
     });
-  }, []);
+    if (location.hash === '#contact') {
+      // Use setTimeout to ensure the page is fully loaded before scrolling
+      setTimeout(() => {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+  }, [location]);
+  
   return (
     <div className={styles.homeContainer}>
       <Header />

@@ -136,7 +136,7 @@ const categories = [
 
 const Products = () => {
   const { category } = useParams();
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [setActiveCategory] = useState(null);
   const [pageBackground, setPageBackground] = useState('#ffffff');
 
   // Fix: Remove categories from dependency array since it's now outside the component

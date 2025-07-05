@@ -9,7 +9,7 @@
     max-height: 800px;
     overflow: hidden;
     /* Add margin to create separation from the dealer network section */
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     /* Optional: add a subtle visual separator */
     border-top: 1px solid #eaeaea;
   }

@@ -21,7 +21,7 @@ const GroupProfile = () => {
         {/* Profile Overview */}
         <section className={styles.profileContent}>
           <div className={styles.profileImage}>
-            <img src="/Images/group.png" alt="Madhura Group Image" />
+            <img src="/Images/group.png"/>
           </div>
           <div className={styles.profileText}>
             <h2>About Madhura Group</h2>
