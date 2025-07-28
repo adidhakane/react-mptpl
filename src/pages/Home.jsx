@@ -1,5 +1,6 @@
 import React,{ useEffect }  from 'react';
 import Header from '../components/Header';
+import NewsTicker from '../components/NewsTicker';
 import HeroBanner from '../components/HeroBanner';
 import WelcomeSection from '../components/WelcomeSection';
 import ProductCategories from '../components/ProductCategories';
@@ -34,6 +35,7 @@ const Home = () => {
   return (
     <div className={styles.homeContainer}>
       <Header />
+      <NewsTicker />
       <HeroBanner />
       <main className={styles.mainContent}>
         <WelcomeSection />

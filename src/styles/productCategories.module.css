@@ -1,0 +1,501 @@
+/* Product Categories - Horizontal Layout with Bottom Applications */
+.products {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.products::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e0e7ff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.productsContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #266c33;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #266c33, #1e5934);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.products h3 {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #4a5568;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Main Grid - Force 4 columns */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto 2rem auto;
+}
+
+.productCardWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Compact Card Styles */
+.flipCard {
+  perspective: 1000px;
+  height: 280px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flipCard:hover {
+  transform: translateY(-5px);
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  border-radius: 15px;
+}
+
+.flipped .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.flipCardFront {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.flipCardFront img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.flipCard:hover .flipCardFront img {
+  transform: scale(1.03);
+}
+
+.flipCardFront h3 {
+  padding: 1rem;
+  margin: 0;
+  color: #2d3748;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.flipCardBack {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.flipCardBack h3 {
+  margin: 0 0 0.8rem 0;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.categoryDescription {
+  color: rgba(255,255,255,0.9);
+  flex-grow: 1;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.productButton {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 0.85rem;
+  background-color: white;
+}
+
+.productButton:hover {
+  background-color: transparent;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+}
+
+/* Horizontal Applications Section */
+.applicationsSection {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 1rem;
+  animation: slideDown 0.5s ease-out;
+}
+
+.applicationsContainer {
+  background: rgba(255,255,255,0.95);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.applicationsHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid;
+}
+
+.applicationsTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  /* margin: 0 0 0.3rem 0; */
+}
+
+.applicationsSubtitle {
+  font-size: 1rem;
+  color: #718096;
+  margin: 0;
+  font-weight: 500;
+}
+
+.applicationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.applicationCard {
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 4px solid;
+  transition: all 0.3s ease;
+  animation: slideInUp 0.4s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.applicationCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s;
+}
+
+.applicationCard:hover::before {
+  left: 100%;
+}
+
+.applicationCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Staggered Animation Delays */
+.applicationCard:nth-child(1) { animation-delay: 0.1s; }
+.applicationCard:nth-child(2) { animation-delay: 0.15s; }
+.applicationCard:nth-child(3) { animation-delay: 0.2s; }
+.applicationCard:nth-child(4) { animation-delay: 0.25s; }
+.applicationCard:nth-child(5) { animation-delay: 0.3s; }
+.applicationCard:nth-child(6) { animation-delay: 0.35s; }
+
+/* Color Themes */
+.industrial .flipCardBack {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.industrial .productButton {
+  color: #2563eb;
+}
+
+.industrial .applicationsHeader {
+  border-color: #2563eb;
+}
+
+.industrial .applicationCard {
+  border-color: #2563eb;
+}
+
+.industrial .applicationCard:hover {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+.automotive .flipCardBack {
+  background: linear-gradient(135deg, #ea580c, #dc2626);
+}
+
+.automotive .productButton {
+  color: #ea580c;
+}
+
+.automotive .applicationsHeader {
+  border-color: #ea580c;
+}
+
+.automotive .applicationCard {
+  border-color: #ea580c;
+}
+
+.automotive .applicationCard:hover {
+  background: linear-gradient(135deg, #fff7ed, #fed7aa);
+}
+
+.ev .flipCardBack {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+}
+
+.ev .productButton {
+  color: #7c3aed;
+}
+
+.ev .applicationsHeader {
+  border-color: #7c3aed;
+}
+
+.ev .applicationCard {
+  border-color: #7c3aed;
+}
+
+.ev .applicationCard:hover {
+  background: linear-gradient(135deg, #faf5ff, #e9d5ff);
+}
+
+.iot .flipCardBack {
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+}
+
+.iot .productButton {
+  color: #0891b2;
+}
+
+.iot .applicationsHeader {
+  border-color: #0891b2;
+}
+
+.iot .applicationCard {
+  border-color: #0891b2;
+}
+
+.iot .applicationCard:hover {
+  background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .flipCard {
+    height: 260px;
+  }
+  
+  .applicationsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    padding: 3rem 0;
+  }
+  
+  .products h2 {
+    font-size: 2rem;
+  }
+  
+  .products h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .flipCard {
+    height: 240px;
+  }
+
+  .flipCardFront h3 {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .categoryDescription {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 3;
+  }
+  
+  .flipCardBack h3 {
+    font-size: 1.1rem;
+  }
+  
+  .productButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .applicationsContainer {
+    padding: 1.5rem;
+  }
+  
+  .applicationsTitle {
+    font-size: 1.3rem;
+  }
+  
+  .applicationsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.8rem;
+  }
+  
+  .applicationCard {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .products h2 {
+    font-size: 1.8rem;
+  }
+  
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .flipCard {
+    height: 220px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .flipCardFront h3 {
+    font-size: 0.95rem;
+  }
+  
+  .applicationsContainer {
+    padding: 1rem;
+  }
+  
+  .applicationsTitle {
+    font-size: 1.2rem;
+  }
+  
+  .applicationsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .productsContainer {
+    padding: 0 1rem;
+  }
+  
+  .flipCard {
+    height: 200px;
+  }
+  
+  .categoryDescription {
+    -webkit-line-clamp: 2;
+  }
+}

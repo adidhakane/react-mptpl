@@ -52,7 +52,7 @@ const TestimonialsAndNews = () => {
   }, []);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} data-section="testimonials-news">
       <div className={styles.testimonialsSection}>
         <h2 className={styles.sectionTitle}>Client Testimonials</h2>
         <div className={styles.testimonialCards}>
